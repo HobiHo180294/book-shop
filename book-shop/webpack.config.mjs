@@ -106,10 +106,10 @@ const plugins = () => {
           from: path.resolve(__dirname, "src/assets/images/header"),
           to: path.resolve(__dirname, "dist/assets/images/header"),
         },
-        // {
-        //   from: path.resolve(__dirname, "src/assets/images/main"),
-        //   to: path.resolve(__dirname, "dist/assets/images/main"),
-        // },
+        {
+          from: path.resolve(__dirname, "src/assets/json"),
+          to: path.resolve(__dirname, "dist/assets/json"),
+        },
         {
           from: path.resolve(__dirname, "src/assets/images/footer"),
           to: path.resolve(__dirname, "dist/assets/images/footer"),

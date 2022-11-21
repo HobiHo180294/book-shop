@@ -54,6 +54,7 @@
   },
   "dependencies": {
     "@babel/polyfill": "^7.12.1",
+    "cors": "^2.8.5",
     "normalize.css": "^8.0.1"
   }
 }
