@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk=self.webpackChunk||[]).push([[697],{2563:()=>{eval('\ndocument.addEventListener("DOMContentLoaded", function () {});\n\n//# sourceURL=webpack:///./pages/order/script.mjs?')}},e=>{var n=n=>e(e.s=n);e.O(0,[202],(()=>(n(1202),n(2563))));e.O()}]);
