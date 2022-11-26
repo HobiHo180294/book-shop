@@ -108,6 +108,8 @@ body {
 }
 
 .book {
+  position: relative;
+
   &__wrapper {
     margin: 0;
     background-color: #333;
@@ -146,6 +148,61 @@ body {
   }
 
   &__buy {
+  }
+
+  &__popup {
+  }
+}
+
+.popup {
+  position: absolute;
+  left: 18px;
+  bottom: 50px;
+  width: 350px;
+  height: 320px;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.811);
+  z-index: 999;
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(1.1);
+  transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+  padding: 10px 10px;
+
+  &__content {
+    margin-left: 10px;
+    padding: 10px 0;
+  }
+
+  &__title {
+    margin: 0;
+    color: white;
+    font-size: 18px;
+  }
+
+  &__description {
+    background-color: gray;
+    max-width: 280px;
+    padding: 5px 20px;
+    border-radius: 0.5rem;
+  }
+
+  &__close {
+    text-align: center;
+    cursor: pointer;
+    border-radius: 0.25rem;
+    background-color: lightgray;
+
+    &:hover {
+      background-color: darkgray;
+    }
+  }
+
+  &__show {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+    transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
   }
 }
 
