@@ -1,5 +1,3 @@
-const pageTitle = document.querySelector("title");
-
 function ibg() {
   let ibg = document.querySelectorAll("._ibg");
 
@@ -15,40 +13,24 @@ function isIterable(obj) {
   return typeof obj[Symbol.iterator] === "function";
 }
 
-function addActiveLink(linksArr) {
-  if (isIterable(linksArr)) {
-    [].forEach.call(linksArr, (link) => {
-      if (link.textContent === pageTitle.textContent)
-        link.classList.add("_active-link");
-    });
-  }
+function addSomeClasses(targetElem, classes) {
+  classes
+    .split(" ")
+    .forEach((classElem) => targetElem.classList.add(classElem));
 }
 
-function removeActiveLink(linksArr) {
-  if (isIterable(linksArr)) {
-    [].forEach.call(linksArr, (link) => {
-      if (link.classList.contains("_active-link"))
-        link.classList.remove("_active-link");
-    });
-  }
+function removeSomeClasses(targetElem, classes) {
+  classes
+    .split(" ")
+    .forEach((classElem) => targetElem.classList.remove(classElem));
 }
 
-function inputNumbersLimit(inputNums) {
-  if (isIterable(inputNums)) {
-    inputNums.forEach((input) => {
-      input.addEventListener("input", () => {
-        if (input.value.length > input.maxLength)
-          input.value = input.value.slice(0, input.maxLength);
-      });
-    });
-  }
+function appendSomeElements(parent, children) {
+  children.forEach((child) => parent.appendChild(child));
 }
 
-export {
-  pageTitle,
-  ibg,
-  isIterable,
-  addActiveLink,
-  removeActiveLink,
-  inputNumbersLimit,
-};
+function setAttributes(element, attrs) {
+  for (var key in attrs) element.setAttribute(key, attrs[key]);
+}
+
+export { addSomeClasses, appendSomeElements, removeSomeClasses, setAttributes };
